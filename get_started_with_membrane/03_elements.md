@@ -157,7 +157,7 @@ defmodule VolumeKnob do
   end
   
   @impl true
-  def handle_process(:input, buffer, ctx, state) do
+  def handle_buffer(:input, buffer, ctx, state) do
     stream_format = ctx.pads.input.stream_format
     sample_size = RawAudio.sample_size(stream_format)
     payload =
